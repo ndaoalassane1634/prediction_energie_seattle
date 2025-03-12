@@ -25,4 +25,4 @@ jobs:
           pip install -r webapp/requirements.txt
 
       - name: 🔬 Exécuter les tests unitaires
-        run: pytest test/ --disable-warnings
+        run: pytest webapp/test/ --disable-warnings
