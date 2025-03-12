@@ -55,29 +55,10 @@ def plot_year_built_distribution(df):
     plt.xticks(rotation=45)
     st.pyplot(fig)
 
-    # plt.figure(figsize=(10, 6))
-
-    # Création des intervalles d'années regroupées par 5
-    # bins = range(df['YearBuilt'].min(), df['YearBuilt'].max() + 6, 5)
-    # labels = [f"{b}-{b+4}" for b in bins[:-1]]
-    # df['YearBuiltGroup'] = pd.cut(df['YearBuilt'], bins=bins, labels=labels, right=False)
-
-    # # Calcul du nombre de bâtiments dans chaque groupe d'années
-    # counts = df['YearBuiltGroup'].value_counts().sort_index()
-
-    # # Création du barplot
-    # counts.plot(kind='bar')
-    # plt.title('Distribution selon l\'année de construction (groupée par intervalles de 5)')
-    # plt.xlabel('Années de construction')
-    # plt.ylabel('Nombre de bâtiments')
-    # plt.xticks(rotation=45)
-    # st.pyplot()
 
 def show_data_analysis():
     data_file = 'data/data.csv'
-    df = pd.read_csv(data_file)
-
-    df = clean_data(df)
+    df = clean_data(data_file)
 
     col1, col2, col3 = st.columns([2, 2, 2])
     with col1:
@@ -128,8 +109,6 @@ def show_data_analysis():
     col6, col7 = st.columns(2)
     with col6:
         plot_year_built_distribution(filtered_df)
-
-
 
     median_consumption = filtered_df['SiteEnergyUse(kBtu)'].median()
     total_consumption = filtered_df['SiteEnergyUse(kBtu)'].sum()

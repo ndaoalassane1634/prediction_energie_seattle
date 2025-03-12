@@ -12,9 +12,6 @@ def load_model():
     return model
 
 def predict(model, df):
-    # features = df.drop(columns=['Log_SiteEnergyUse'], errors='ignore')
-    # predictions = model.predict(features)
-    # return predictions
     """ Vérifie si df est un DataFrame, sinon le convertir """
     if isinstance(df, np.ndarray):
         df = pd.DataFrame(df)  # Convertit un numpy array en DataFrame
@@ -37,7 +34,8 @@ def show_prediction_page():
     uploaded_file = st.file_uploader("Télécharger un fichier CSV", type="csv")
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
-        df = clean_data(df)
+        # df = clean_data(df)
+        # df = clean_data(uploaded_file)
 
         if 'Log_SiteEnergyUse' not in df.columns:
             st.error("Le fichier CSV doit contenir une colonne 'Log_SiteEnergyUse'")

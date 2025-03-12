@@ -20,14 +20,14 @@ st.subheader("Tableau de bord d'analyse énergétique")
 # Sélection du menu latéral
 selected_tab = st.sidebar.selectbox(
     "Sélectionner une option :",
-    ["Accueil", "Analyse des données", "Prédictions"]
+    ["Accueil", "Analyse des données"]
 )
 
 # Chargement des données
 def load_data():
     data_file = 'data/data.csv'
-    df=pd.read_csv(data_file)
-    df = clean_data(df)
+    # df=pd.read_csv(data_file)
+    df = clean_data(data_file)
     return df
 
 df = load_data()
