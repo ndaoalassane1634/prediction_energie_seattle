@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛠️ Cloner le repository
+        uses: actions/checkout@v3
+
+      - name: 🚀 Déploiement sur Streamlit Cloud
+        run: echo "Va sur https://share.streamlit.io pour déployer manuellement 🚀"

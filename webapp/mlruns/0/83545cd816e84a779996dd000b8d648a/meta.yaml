@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ndaoalassane/SIMPLON/prediction_energie_seatlle/webapp/mlruns/0/83545cd816e84a779996dd000b8d648a/artifacts
+end_time: 1741697341460
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 83545cd816e84a779996dd000b8d648a
+run_name: shivering-fox-760
+run_uuid: 83545cd816e84a779996dd000b8d648a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741697339479
+status: 3
+tags: []
+user_id: ndaoalassane
