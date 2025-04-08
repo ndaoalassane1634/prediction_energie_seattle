@@ -25,4 +25,6 @@ jobs:
           pip install -r webapp/requirements.txt
 
       - name: 🔬 Exécuter les tests unitaires
-        run: pytest webapp/test/ --disable-warnings
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/webapp
+          pytest webapp/test/ --disable-warnings
