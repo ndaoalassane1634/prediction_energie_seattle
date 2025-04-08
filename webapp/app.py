@@ -33,6 +33,7 @@ def load_data():
 df = load_data()
 
 # Gestion des pages
+
 if selected_tab == "Accueil":
     st.subheader("Agilité, Précision et Profits")
     st.write("Sélectionnez une option dans la barre latérale.")

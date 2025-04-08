@@ -16,15 +16,21 @@ def clean_data(file_path):
         'YearsENERGYSTARCertified', 'ZipCode'
     ]
 
-
-    if not isinstance(df, pd.DataFrame):  # Vérification
+    if not isinstance(df, pd.DataFrame):
         raise ValueError("clean_data() attend un fichier CSV valide qui retourne un DataFrame.")
 
     df.drop(supprimer, axis=1, inplace=True)
+
+
     df = df.dropna(subset=['SiteEnergyUse(kBtu)'])
     df = df[df['SiteEnergyUse(kBtu)'] != 0]
     #  Ajout de la colonne `Log_SiteEnergyUse`
+
+
     df['Log_SiteEnergyUse'] = np.log1p(df['SiteEnergyUse(kBtu)'])
+
+
+
     df = df.dropna(subset=['NumberofBuildings'])
     df['BuildingType'].replace(
         {'Nonresidential COS': 'NonResidential', 'Nonresidential WA': 'NonResidential'},
@@ -44,9 +50,11 @@ def clean_data(file_path):
 
     supprimer2 = ['GFA_Sum', 'LargestPropertyUseTypeGFA', 'SecondLargestPropertyUseTypeGFA', 'ThirdLargestPropertyUseTypeGFA']
 
+
     df['LargestPropertyUseTypeGFA_Ratio'] = df['LargestPropertyUseTypeGFA'] / df['PropertyGFATotal']
     df['SecondLargestPropertyUseTypeGFA_Ratio'] = df['SecondLargestPropertyUseTypeGFA'] / df['PropertyGFATotal']
     df['ThirdLargestPropertyUseTypeGFA_Ratio'] = df['ThirdLargestPropertyUseTypeGFA'] / df['PropertyGFATotal']
+
 
     df.drop(supprimer2, axis=1, inplace=True)
 

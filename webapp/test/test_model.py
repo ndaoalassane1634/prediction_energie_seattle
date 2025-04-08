@@ -11,10 +11,9 @@ def test_load_model():
     assert hasattr(model, "predict"), "Le modèle n'a pas de méthode 'predict'"
 
 # Test 2 : Vérifier le fonctionnement de la prédiction
+
 def test_predict():
     model = load_model()
-
-    # Définir les colonnes attendues par le modèle
     expected_columns = [
         'YearBuilt', 'NumberofBuildings', 'NumberofFloors', 'PropertyGFATotal',
         'GFAPerBuilding', 'GFAPerFloor', 'GFABuildingRate', 'LargestPropertyUseTypeGFA',
@@ -22,19 +21,18 @@ def test_predict():
         'BuildingType', 'Neighborhood', 'LargestPropertyUseType'
     ]
 
-    # Création d'un DataFrame avec les bonnes colonnes
     X_sample = pd.DataFrame([[
         2005, 1, 3, 5000, 2500, 1250, 0.5, 3000, 0.2, 4,
         'NonResidential', 'Downtown', 'Office'
     ]], columns=expected_columns)
 
     prediction = predict(model, X_sample)
-
-    # Vérifier que la sortie a la bonne forme
     assert prediction.shape == (1,)
     assert isinstance(prediction[0], (float, np.float32, np.float64))
 
 # Test 3 : Vérifier la cohérence des métriques
+
+
 def test_calculate_metrics():
     y_true = np.array([3.2, 4.5, 5.1])
     y_pred = np.array([3.1, 4.4, 5.0])

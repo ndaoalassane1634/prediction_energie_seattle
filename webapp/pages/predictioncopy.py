@@ -11,10 +11,11 @@ def load_model():
         model = joblib.load(f)
     return model
 
+
 def predict(model, df):
     """ Vérifie si df est un DataFrame, sinon le convertir """
     if isinstance(df, np.ndarray):
-        df = pd.DataFrame(df)  # Convertit un numpy array en DataFrame
+        df = pd.DataFrame(df)
 
     features = df.drop(columns=['Log_SiteEnergyUse'], errors='ignore')
     predictions = model.predict(features)
