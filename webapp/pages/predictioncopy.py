@@ -3,10 +3,10 @@ import pandas as pd
 import joblib
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import numpy as np
-from scripts.data_cleaning import clean_data
+#from scripts.data_cleaning import clean_data
 
 def load_model():
-    model_path = "/home/ndaoalassane/SIMPLON/prediction_energie_seatlle/webapp/model/model_pipelineenergy.joblib"
+    model_path = "model/model_pipelineenergy.joblib"
     with open(model_path, 'rb') as f:
         model = joblib.load(f)
     return model
