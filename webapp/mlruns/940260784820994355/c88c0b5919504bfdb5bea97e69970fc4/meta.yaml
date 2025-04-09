@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ndaoalassane/SIMPLON/prediction_energie_seatlle/webapp/mlruns/940260784820994355/c88c0b5919504bfdb5bea97e69970fc4/artifacts
+end_time: 1744207009412
+entry_point_name: ''
+experiment_id: '940260784820994355'
+lifecycle_stage: active
+run_id: c88c0b5919504bfdb5bea97e69970fc4
+run_name: Lasso
+run_uuid: c88c0b5919504bfdb5bea97e69970fc4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744207004343
+status: 3
+tags: []
+user_id: ndaoalassane

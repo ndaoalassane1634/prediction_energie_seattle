@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ndaoalassane/SIMPLON/prediction_energie_seatlle/webapp/mlruns/940260784820994355/bee2a55d7986441aa8cf8d806d632571/artifacts
+end_time: 1744207004339
+entry_point_name: ''
+experiment_id: '940260784820994355'
+lifecycle_stage: active
+run_id: bee2a55d7986441aa8cf8d806d632571
+run_name: Ridge
+run_uuid: bee2a55d7986441aa8cf8d806d632571
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744207002064
+status: 3
+tags: []
+user_id: ndaoalassane

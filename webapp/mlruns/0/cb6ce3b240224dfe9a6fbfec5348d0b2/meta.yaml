@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ndaoalassane/SIMPLON/prediction_energie_seatlle/webapp/mlruns/0/cb6ce3b240224dfe9a6fbfec5348d0b2/artifacts
+end_time: 1744206948205
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cb6ce3b240224dfe9a6fbfec5348d0b2
+run_name: adventurous-elk-251
+run_uuid: cb6ce3b240224dfe9a6fbfec5348d0b2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744206945535
+status: 3
+tags: []
+user_id: ndaoalassane
